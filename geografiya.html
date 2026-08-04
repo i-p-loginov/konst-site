@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>География — КОНСТАНТА</title>
+  <meta name="description" content="Зона присутствия КОНСТАНТА: районы Ленинградской области в зоне АО «ЛОЭСК».">
+  <meta property="og:title" content="География — КОНСТАНТА">
+  <meta property="og:description" content="Интерактивная карта районов Ленинградской области.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <svg class="logo-mark" viewBox="0 0 64 64" width="42" height="42" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="32"/><path d="M17 15h9.2l10.2 15.5L26.2 49H17l10.4-15.6L17 15zm20.5 0H47c1.5 3.4 2.3 7 2.3 10.8S48.5 33 47 36.4h-9.5c1.3-3 2-6.2 2-9.6s-.7-6.6-2-9.6zm0 34H47c1.5-3.4 2.3-7 2.3-10.8 0-1.5-.1-3-.4-4.4h-9.2c.5 1.4.7 2.9.7 4.4 0 3.4-.7 6.6-2 9.6z"/></svg>
+        <span>
+          <span class="logo-text">Константа</span>
+          <span class="logo-tag">Партнёр АО «ЛОЭСК»</span>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="uslugi.html">Услуги</a>
+        <a href="o-kompanii.html">О компании</a>
+        <a href="geografiya.html" aria-current="page">География</a>
+        <a href="kontakty.html">Контакты</a>
+      </nav>
+      <div class="header-cta">
+        <a class="header-phone" href="tel:+78120000000">+7 (812) 000-00-00</a>
+        <a class="btn btn-primary" href="kontakty.html">Оставить заявку</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="breadcrumb"><a href="index.html">Главная</a> / География</p>
+        <h1>География присутствия</h1>
+        <p>Работаем по Ленинградской области в зоне ответственности АО «ЛОЭСК». Выберите район на карте или в списке.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" data-region-map>
+        <div class="map-layout reveal">
+          <div class="map-stage" data-map-svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" class="lenoblast-map" role="img" aria-label="Карта Ленинградской области">
+              <g id="districts">
+                <path id="vyborgskiy" class="map-district" data-id="vyborgskiy" d="M40 40 L220 30 L250 90 L230 160 L180 200 L90 190 L50 140 L40 80 Z"/>
+                <path id="priozerskiy" class="map-district" data-id="priozerskiy" d="M220 30 L340 40 L360 100 L320 150 L250 140 L230 90 Z"/>
+                <path id="vsevolozhskiy" class="map-district" data-id="vsevolozhskiy" d="M250 140 L320 150 L350 200 L320 250 L250 260 L220 210 L230 160 Z"/>
+                <path id="kirovskiy" class="map-district" data-id="kirovskiy" d="M320 150 L400 140 L430 190 L400 250 L350 260 L320 250 L350 200 Z"/>
+                <path id="volkhovskiy" class="map-district" data-id="volkhovskiy" d="M400 140 L500 120 L540 180 L510 250 L430 260 L400 250 L430 190 Z"/>
+                <path id="lodeynopolskiy" class="map-district" data-id="lodeynopolskiy" d="M500 80 L600 70 L630 140 L580 190 L540 180 L500 120 Z"/>
+                <path id="podporozhskiy" class="map-district" data-id="podporozhskiy" d="M600 40 L720 50 L740 120 L680 160 L630 140 L600 70 Z"/>
+                <path id="tikhvinskiy" class="map-district" data-id="tikhvinskiy" d="M540 180 L620 170 L660 240 L620 310 L540 300 L510 250 L580 190 Z"/>
+                <path id="boksitogorskiy" class="map-district" data-id="boksitogorskiy" d="M620 170 L720 160 L760 230 L720 300 L660 310 L620 310 L660 240 Z"/>
+                <path id="kirishskiy" class="map-district" data-id="kirishskiy" d="M430 260 L510 250 L540 300 L500 350 L430 340 L400 290 Z"/>
+                <path id="tosnenskiy" class="map-district" data-id="tosnenskiy" d="M320 250 L400 250 L400 290 L430 340 L380 390 L300 370 L290 300 Z"/>
+                <path id="gatchinskiy" class="map-district" data-id="gatchinskiy" d="M200 280 L290 300 L300 370 L250 420 L170 400 L160 330 Z"/>
+                <path id="lomonosovskiy" class="map-district" data-id="lomonosovskiy" d="M100 250 L200 260 L200 280 L160 330 L100 340 L70 290 Z"/>
+                <path id="sosnovoborskiy" class="map-district" data-id="sosnovoborskiy" d="M60 220 L100 230 L100 250 L70 290 L40 270 L45 230 Z"/>
+                <path id="volosovskiy" class="map-district" data-id="volosovskiy" d="M100 340 L160 330 L170 400 L140 460 L80 450 L70 380 Z"/>
+                <path id="kingiseppskiy" class="map-district" data-id="kingiseppskiy" d="M20 320 L70 310 L70 380 L80 450 L40 490 L10 430 L15 360 Z"/>
+                <path id="slantsevskiy" class="map-district" data-id="slantsevskiy" d="M40 490 L80 450 L120 480 L100 530 L50 540 L30 510 Z"/>
+                <path id="luzhskiy" class="map-district" data-id="luzhskiy" d="M140 460 L250 420 L300 460 L280 520 L180 530 L120 480 Z"/>
+              </g>
+              <g class="map-labels" aria-hidden="true">
+                <text class="map-label" data-for="vyborgskiy" x="130" y="110">Выборгский</text>
+                <text class="map-label" data-for="priozerskiy" x="285" y="90">Приозерский</text>
+                <text class="map-label" data-for="vsevolozhskiy" x="285" y="200">Всеволожский</text>
+                <text class="map-label" data-for="kirovskiy" x="370" y="200">Кировский</text>
+                <text class="map-label" data-for="volkhovskiy" x="465" y="195">Волховский</text>
+                <text class="map-label" data-for="lodeynopolskiy" x="560" y="130">Лодейнопольский</text>
+                <text class="map-label" data-for="podporozhskiy" x="670" y="95">Подпорожский</text>
+                <text class="map-label" data-for="tikhvinskiy" x="590" y="245">Тихвинский</text>
+                <text class="map-label" data-for="boksitogorskiy" x="695" y="240">Бокситогорский</text>
+                <text class="map-label" data-for="kirishskiy" x="465" y="305">Киришский</text>
+                <text class="map-label" data-for="tosnenskiy" x="360" y="320">Тосненский</text>
+                <text class="map-label" data-for="gatchinskiy" x="235" y="350">Гатчинский</text>
+                <text class="map-label" data-for="lomonosovskiy" x="135" y="295">Ломоносовский</text>
+                <text class="map-label" data-for="sosnovoborskiy" x="70" y="250">Сосновый Бор</text>
+                <text class="map-label" data-for="volosovskiy" x="120" y="395">Волосовский</text>
+                <text class="map-label" data-for="kingiseppskiy" x="45" y="400">Кингисеппский</text>
+                <text class="map-label" data-for="slantsevskiy" x="70" y="510">Сланцевский</text>
+                <text class="map-label" data-for="luzhskiy" x="210" y="485">Лужский</text>
+              </g>
+              <circle cx="235" cy="235" r="7" fill="#1B2A4A" opacity="0.9"/>
+              <text x="248" y="239" class="map-label" style="text-anchor:start;font-size:12px;">СПб</text>
+            </svg>
+          </div>
+          <aside class="map-panel">
+            <h3 data-map-title>Выберите район</h3>
+            <p data-map-text>Наведите на область карты или выберите район в списке ниже — покажем краткую информацию и кнопку заявки.</p>
+            <a class="btn btn-secondary" href="kontakty.html">Оставить заявку</a>
+          </aside>
+        </div>
+        <ul class="district-list reveal" data-district-list></ul>
+        <p class="reveal" style="margin-top:1.5rem;color:var(--color-ink-muted);font-size:0.9rem;">Карта схематическая и служит для навигации по районам присутствия. Границы упрощены.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 64 64" width="42" height="42" aria-hidden="true" focusable="false"><circle cx="32" cy="32" r="32"/><path d="M17 15h9.2l10.2 15.5L26.2 49H17l10.4-15.6L17 15zm20.5 0H47c1.5 3.4 2.3 7 2.3 10.8S48.5 33 47 36.4h-9.5c1.3-3 2-6.2 2-9.6s-.7-6.6-2-9.6zm0 34H47c1.5-3.4 2.3-7 2.3-10.8 0-1.5-.1-3-.4-4.4h-9.2c.5 1.4.7 2.9.7 4.4 0 3.4-.7 6.6-2 9.6z"/></svg>
+            <span>
+              <span class="logo-text">Константа</span>
+              <span class="logo-tag">Официальный партнёр АО «ЛОЭСК»</span>
+            </span>
+          </a>
+          <p>Электроэнергия под ключ: документы, технологическое присоединение и увеличение мощности в Ленинградской области.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Разделы</h4>
+          <ul>
+            <li><a href="uslugi.html">Услуги</a></li>
+            <li><a href="o-kompanii.html">О компании</a></li>
+            <li><a href="geografiya.html">География</a></li>
+            <li><a href="kontakty.html">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Связь</h4>
+          <ul>
+            <li><a href="tel:+78120000000">+7 (812) 000-00-00</a></li>
+            <li><a href="mailto:info@konstanta.example">info@konstanta.example</a></li>
+            <li>Санкт-Петербург / ЛО</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 КОНСТАНТА. Все права защищены.</span>
+        <a href="privacy.html">Политика обработки персональных данных</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cookie-banner" role="dialog" aria-label="Уведомление о cookie">
+    <div class="container cookie-inner">
+      <p>Сайт использует файлы cookie, чтобы работать стабильнее. Продолжая пользоваться сайтом, вы соглашаетесь с <a href="privacy.html">политикой обработки данных</a>.</p>
+      <button class="btn btn-primary" type="button" data-cookie-accept>Принимаю</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/map.js"></script>
+</body>
+</html>
