@@ -518,7 +518,8 @@ ul {
 }
 
 .service-card {
-  padding: 1.75rem;
+  padding: 0;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: background 0.25s var(--ease), transform 0.25s var(--ease);
@@ -527,6 +528,18 @@ ul {
 .service-card:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+}
+
+.service-card-body {
+  padding: 1.35rem 1.5rem 1.5rem;
+}
+
+.service-media {
+  display: block;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .service-card h3 {
@@ -565,6 +578,10 @@ ul {
   color: var(--color-ink-muted);
 }
 
+.service-card-light .service-media {
+  height: 190px;
+}
+
 .service-num {
   font-family: var(--font-display);
   font-weight: 800;
@@ -576,6 +593,67 @@ ul {
 
 .service-card-light .service-num {
   color: var(--color-primary);
+}
+
+/* ——— Visual band ——— */
+
+.visual-band {
+  position: relative;
+  min-height: 280px;
+  display: flex;
+  align-items: flex-end;
+  background-color: var(--color-ink);
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+.visual-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(27, 42, 74, 0.88) 0%,
+    rgba(0, 127, 130, 0.55) 55%,
+    rgba(27, 42, 74, 0.35) 100%
+  );
+}
+
+.visual-band-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, var(--container));
+  margin-inline: auto;
+  padding: 2.75rem 0;
+  max-width: 36rem;
+}
+
+.visual-band h2 {
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.visual-band p {
+  margin: 0 0 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* ——— About split ——— */
+
+.about-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.about-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  display: block;
 }
 
 /* ——— CTA band ——— */
@@ -1170,6 +1248,19 @@ a.contact-value:hover {
 
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    min-height: 220px;
+    max-height: 280px;
+  }
+
+  .visual-band {
+    min-height: 240px;
   }
 
   .cta-band {
