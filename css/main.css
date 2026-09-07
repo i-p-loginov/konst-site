@@ -911,19 +911,46 @@ ul {
 
 .branch-sites {
   list-style: none;
-  margin: 0.35rem 0 0;
-  padding: 0 0 0 0.85rem;
-  border-left: 2px solid var(--color-primary-soft);
+  margin: 0.4rem 0 0;
+  padding: 0.45rem 0.55rem 0.45rem 0.7rem;
+  background: var(--color-primary-soft);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 0 var(--radius) var(--radius) 0;
 }
 
 .branch-sites li {
+  position: relative;
   font-size: 0.82rem;
-  color: var(--color-ink-muted);
-  padding: 0.2rem 0;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  padding: 0.25rem 0 0.25rem 0.9rem;
+}
+
+.branch-sites li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--color-accent);
+  border-radius: 1px;
+}
+
+.branch-item > button.is-active + .branch-sites {
+  background: rgba(255, 255, 255, 0.18);
+  border-left-color: var(--color-accent);
+}
+
+.branch-item > button.is-active + .branch-sites li {
+  color: var(--color-white);
 }
 
 .map-sites {
   margin: 0 0 1rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--color-primary-soft);
+  border-left: 3px solid var(--color-primary);
   font-size: 0.9rem;
   color: var(--color-ink-muted);
   line-height: 1.5;
@@ -931,19 +958,40 @@ ul {
 
 .site-chip {
   display: inline-block;
-  margin: 0.25rem 0.25rem 0 0;
-  padding: 0.2rem 0.55rem;
-  background: var(--color-primary-soft);
+  margin: 0.3rem 0.3rem 0 0;
+  padding: 0.25rem 0.65rem;
+  background: var(--color-white);
   color: var(--color-primary-dark);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
+  border: 1px solid var(--color-primary);
   border-radius: var(--radius);
 }
 
+.map-district-site {
+  fill: #a8d4d6;
+  stroke-dasharray: 4 2;
+}
+
+.map-district-site:hover,
+.map-district-site.is-hover {
+  fill: #5ebfc2;
+}
+
+.map-district-site.is-active {
+  fill: #2a9a9d;
+}
+
 .map-label-site {
-  font-size: 9px;
-  font-weight: 600;
-  fill: #4a5a75;
+  font-size: 9.5px;
+  font-weight: 700;
+  fill: #007f82;
+  font-style: italic;
+}
+
+.map-label-site.is-on-active,
+.map-label-site.is-on-hover {
+  fill: #ffffff;
 }
 
 .map-panel .btn {
