@@ -1,44 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" class="lenoblast-map" role="img" aria-label="Leningrad oblast map">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" class="lenoblast-map" role="img" aria-label="Konstanta branches map">
   <g id="districts">
-    <path id="vyborgskiy" class="map-district" data-id="vyborgskiy" d="M40 40 L220 30 L250 90 L230 160 L180 200 L90 190 L50 140 L40 80 Z"/>
-    <path id="priozerskiy" class="map-district" data-id="priozerskiy" d="M220 30 L340 40 L360 100 L320 150 L250 140 L230 90 Z"/>
-    <path id="vsevolozhskiy" class="map-district" data-id="vsevolozhskiy" d="M250 140 L320 150 L350 200 L320 250 L250 260 L220 210 L230 160 Z"/>
-    <path id="kirovskiy" class="map-district" data-id="kirovskiy" d="M320 150 L400 140 L430 190 L400 250 L350 260 L320 250 L350 200 Z"/>
-    <path id="volkhovskiy" class="map-district" data-id="volkhovskiy" d="M400 140 L500 120 L540 180 L510 250 L430 260 L400 250 L430 190 Z"/>
-    <path id="lodeynopolskiy" class="map-district" data-id="lodeynopolskiy" d="M500 80 L600 70 L630 140 L580 190 L540 180 L500 120 Z"/>
-    <path id="podporozhskiy" class="map-district" data-id="podporozhskiy" d="M600 40 L720 50 L740 120 L680 160 L630 140 L600 70 Z"/>
-    <path id="tikhvinskiy" class="map-district" data-id="tikhvinskiy" d="M540 180 L620 170 L660 240 L620 310 L540 300 L510 250 L580 190 Z"/>
-    <path id="boksitogorskiy" class="map-district" data-id="boksitogorskiy" d="M620 170 L720 160 L760 230 L720 300 L660 310 L620 310 L660 240 Z"/>
-    <path id="kirishskiy" class="map-district" data-id="kirishskiy" d="M430 260 L510 250 L540 300 L500 350 L430 340 L400 290 Z"/>
-    <path id="tosnenskiy" class="map-district" data-id="tosnenskiy" d="M320 250 L400 250 L400 290 L430 340 L380 390 L300 370 L290 300 Z"/>
-    <path id="gatchinskiy" class="map-district" data-id="gatchinskiy" d="M200 280 L290 300 L300 370 L250 420 L170 400 L160 330 Z"/>
-    <path id="lomonosovskiy" class="map-district" data-id="lomonosovskiy" d="M100 250 L200 260 L200 280 L160 330 L100 340 L70 290 Z"/>
-    <path id="sosnovoborskiy" class="map-district" data-id="sosnovoborskiy" d="M60 220 L100 230 L100 250 L70 290 L40 270 L45 230 Z"/>
-    <path id="volosovskiy" class="map-district" data-id="volosovskiy" d="M100 340 L160 330 L170 400 L140 460 L80 450 L70 380 Z"/>
-    <path id="kingiseppskiy" class="map-district" data-id="kingiseppskiy" d="M20 320 L70 310 L70 380 L80 450 L40 490 L10 430 L15 360 Z"/>
-    <path id="slantsevskiy" class="map-district" data-id="slantsevskiy" d="M40 490 L80 450 L120 480 L100 530 L50 540 L30 510 Z"/>
-    <path id="luzhskiy" class="map-district" data-id="luzhskiy" d="M140 460 L250 420 L300 460 L280 520 L180 530 L120 480 Z"/>
+    <path class="map-district" data-id="vyborgskiy" data-branch="vyborgskoe" d="M40 40 L280 30 L300 100 L250 170 L180 200 L90 190 L50 140 L40 80 Z"/>
+    <path class="map-district" data-id="vsevolozhskiy" data-branch="prigorodnoe" d="M250 140 L340 130 L370 190 L340 250 L260 260 L220 210 L230 160 Z"/>
+    <path class="map-district" data-id="kirovskiy" data-branch="kirovskoe" d="M340 130 L420 125 L450 185 L420 250 L350 260 L340 250 L370 190 Z"/>
+    <path class="map-district" data-id="volkhovskiy" data-branch="volkhovskoe" d="M420 125 L540 110 L570 180 L540 250 L450 260 L420 250 L450 185 Z"/>
+    <path class="map-district" data-id="lodeynopolskiy" data-branch="lodeynopolskoe" d="M540 70 L700 55 L730 140 L680 190 L570 180 L540 110 Z"/>
+    <path class="map-district" data-id="tikhvinskiy" data-branch="tikhvinskoe" d="M570 180 L650 170 L680 240 L640 310 L560 300 L540 250 L680 190 Z"/>
+    <path class="map-district" data-id="boksitogorskiy" data-branch="tikhvinskoe" d="M650 170 L760 155 L780 240 L740 310 L680 320 L640 310 L680 240 Z"/>
+    <path class="map-district" data-id="kirishskiy" data-branch="kirishskoe" d="M450 260 L540 250 L560 300 L520 360 L450 350 L420 300 Z"/>
+    <path class="map-district" data-id="tosnenskiy" data-branch="tosnenskoe" d="M340 250 L420 250 L420 300 L450 350 L390 400 L310 380 L300 300 Z"/>
+    <path class="map-district" data-id="gatchinskiy" data-branch="gatchinskoe" d="M180 280 L300 300 L310 380 L260 430 L170 410 L150 330 Z"/>
+    <path class="map-district" data-id="sosnovoborskiy" data-branch="sosnovoborskiy" d="M55 210 L130 220 L150 280 L100 320 L50 300 L45 240 Z"/>
+    <path class="map-district" data-id="volosovskiy" data-branch="kingiseppskoe" d="M100 340 L150 330 L170 410 L145 470 L85 460 L70 380 Z"/>
+    <path class="map-district" data-id="kingiseppskiy" data-branch="kingiseppskoe" d="M15 300 L70 290 L70 380 L85 460 L40 510 L10 430 L12 340 Z"/>
+    <path class="map-district" data-id="slantsevskiy" data-branch="kingiseppskoe" d="M40 510 L85 460 L125 490 L105 540 L55 545 L28 520 Z"/>
+    <path class="map-district" data-id="luzhskiy" data-branch="luzhskoe" d="M145 470 L260 430 L320 470 L295 530 L185 540 L125 490 Z"/>
   </g>
-  <g class="map-labels" aria-hidden="true">
-    <text class="map-label" data-for="vyborgskiy" x="130" y="110" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Vyborgskiy</text>
-    <text class="map-label" data-for="priozerskiy" x="285" y="90" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Priozerskiy</text>
-    <text class="map-label" data-for="vsevolozhskiy" x="285" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Vsevolozhskiy</text>
-    <text class="map-label" data-for="kirovskiy" x="370" y="200" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Kirovskiy</text>
-    <text class="map-label" data-for="volkhovskiy" x="465" y="195" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Volkhovskiy</text>
-    <text class="map-label" data-for="lodeynopolskiy" x="560" y="130" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Lodeynopolskiy</text>
-    <text class="map-label" data-for="podporozhskiy" x="670" y="95" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Podporozhskiy</text>
-    <text class="map-label" data-for="tikhvinskiy" x="590" y="245" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Tikhvinskiy</text>
-    <text class="map-label" data-for="boksitogorskiy" x="695" y="240" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Boksitogorskiy</text>
-    <text class="map-label" data-for="kirishskiy" x="465" y="305" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Kirishskiy</text>
-    <text class="map-label" data-for="tosnenskiy" x="360" y="320" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Tosnenskiy</text>
-    <text class="map-label" data-for="gatchinskiy" x="235" y="350" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Gatchinskiy</text>
-    <text class="map-label" data-for="lomonosovskiy" x="135" y="295" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Lomonosovskiy</text>
-    <text class="map-label" data-for="sosnovoborskiy" x="70" y="250" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Sosnovy Bor</text>
-    <text class="map-label" data-for="volosovskiy" x="120" y="395" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Volosovskiy</text>
-    <text class="map-label" data-for="kingiseppskiy" x="45" y="400" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Kingiseppskiy</text>
-    <text class="map-label" data-for="slantsevskiy" x="70" y="510" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Slantsevskiy</text>
-    <text class="map-label" data-for="luzhskiy" x="210" y="485" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="11" font-weight="700" fill="#1B2A4A">Luzhskiy</text>
-  </g>
-  <circle cx="235" cy="235" r="7" fill="#1B2A4A" opacity="0.9"/>
-  <text x="248" y="239" font-family="Arial" font-size="12" font-weight="700" fill="#1B2A4A">SPb</text>
 </svg>
