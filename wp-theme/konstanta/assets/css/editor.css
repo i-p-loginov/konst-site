@@ -1,0 +1,24 @@
+/* Только для редактора: всё видно сразу, без анимаций и фиксированных элементов. */
+.reveal,
+.hero-inner {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+.header-part,
+.site-header {
+  position: relative !important;
+  top: auto !important;
+}
+
+/* Баннер cookie в редакторе подвала показываем на месте, а не за краем экрана. */
+.cookie-banner {
+  position: relative !important;
+  transform: none !important;
+}
+
+/* Пустые группы-обёртки видны и кликабельны */
+.editor-styles-wrapper .wp-block-group:empty {
+  min-height: 2rem;
+}

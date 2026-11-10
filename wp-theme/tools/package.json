@@ -1,0 +1,13 @@
+{
+  "name": "konstanta-theme-tools",
+  "private": true,
+  "description": "Генерация паттернов страниц темы Константа",
+  "scripts": { "build": "node build-patterns.cjs" },
+  "devDependencies": {
+    "@wordpress/block-library": "*",
+    "@wordpress/blocks": "*",
+    "@wordpress/element": "*",
+    "global-jsdom": "*",
+    "jsdom": "*"
+  }
+}

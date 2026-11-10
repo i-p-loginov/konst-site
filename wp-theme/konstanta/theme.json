@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "useRootPaddingAwareAlignments": false,
+    "layout": { "contentSize": "1120px", "wideSize": "1120px" },
+    "spacing": { "blockGap": null, "units": ["px", "rem", "em", "%"] },
+    "color": {
+      "defaultPalette": false,
+      "defaultGradients": false,
+      "palette": [
+        { "slug": "primary", "name": "Бирюзовый", "color": "#00a3a6" },
+        { "slug": "primary-dark", "name": "Бирюзовый тёмный", "color": "#007f82" },
+        { "slug": "primary-soft", "name": "Бирюзовый светлый", "color": "#e0f5f5" },
+        { "slug": "ink", "name": "Тёмно-синий", "color": "#1b2a4a" },
+        { "slug": "ink-muted", "name": "Серо-синий", "color": "#4a5a75" },
+        { "slug": "accent", "name": "Жёлтый", "color": "#f5c518" },
+        { "slug": "surface", "name": "Светлый фон", "color": "#f3f6f8" },
+        { "slug": "white", "name": "Белый", "color": "#ffffff" }
+      ]
+    },
+    "typography": {
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        { "slug": "display", "name": "Manrope", "fontFamily": "\"Manrope\", system-ui, sans-serif" },
+        { "slug": "body", "name": "Source Sans 3", "fontFamily": "\"Source Sans 3\", system-ui, sans-serif" }
+      ],
+      "fontSizes": [
+        { "slug": "small", "name": "Мелкий", "size": "0.9rem" },
+        { "slug": "medium", "name": "Обычный", "size": "1.0625rem" },
+        { "slug": "large", "name": "Крупный", "size": "1.35rem" },
+        { "slug": "x-large", "name": "Очень крупный", "size": "2rem" }
+      ]
+    }
+  },
+  "styles": {
+    "spacing": { "padding": { "top": "0", "right": "0", "bottom": "0", "left": "0" } },
+    "elements": {
+      "button": {
+        "border": { "radius": "4px" },
+        "typography": { "fontFamily": "var(--wp--preset--font-family--display)" }
+      }
+    }
+  },
+  "templateParts": [
+    { "name": "header", "title": "Шапка", "area": "header" },
+    { "name": "footer", "title": "Подвал", "area": "footer" }
+  ],
+  "customTemplates": []
+}
