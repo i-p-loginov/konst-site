@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "konstanta/request-form",
+  "title": "Форма заявки",
+  "category": "widgets",
+  "icon": "email-alt",
+  "description": "Форма заявки. Заявки сохраняются в разделе «Заявки» и отправляются на почту из «Заявки → Настройки».",
+  "keywords": ["форма", "заявка", "контакты"],
+  "textdomain": "konstanta",
+  "supports": { "html": false, "anchor": true },
+  "attributes": {
+    "title": { "type": "string", "default": "Оставить заявку" },
+    "lead": { "type": "string", "default": "Кратко опишите задачу — перезвоним и уточним детали." },
+    "successText": { "type": "string", "default": "Спасибо! Заявка принята. Мы свяжемся с вами в ближайшее время." },
+    "messagePlaceholder": { "type": "string", "default": "Адрес объекта, вопрос по прибору учёта, нужная мощность…" },
+    "buttonText": { "type": "string", "default": "Отправить заявку" },
+    "showBranch": { "type": "boolean", "default": true },
+    "showEmail": { "type": "boolean", "default": true }
+  },
+  "editorScript": "konstanta-editor",
+  "render": "file:./render.php"
+}

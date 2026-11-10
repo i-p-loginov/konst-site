@@ -1,0 +1,23 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "konstanta/branch-map",
+  "title": "Карта отделений",
+  "category": "widgets",
+  "icon": "location-alt",
+  "description": "Интерактивная карта Ленинградской области со списком отделений. Сами отделения редактируются в разделе «Отделения».",
+  "keywords": ["карта", "отделения", "география"],
+  "textdomain": "konstanta",
+  "supports": { "html": false, "multiple": false, "anchor": true },
+  "attributes": {
+    "panelTitle": { "type": "string", "default": "Выберите отделение" },
+    "panelText": { "type": "string", "default": "Наведите на область карты или выберите отделение в списке — участки отображаются в составе головного отделения." },
+    "buttonText": { "type": "string", "default": "Оставить заявку" },
+    "buttonUrl": { "type": "string", "default": "" },
+    "sitesLabel": { "type": "string", "default": "В составе:" },
+    "initial": { "type": "string", "default": "Пригородное отделение" }
+  },
+  "editorScript": "konstanta-editor",
+  "viewScript": "konstanta-map",
+  "render": "file:./render.php"
+}
