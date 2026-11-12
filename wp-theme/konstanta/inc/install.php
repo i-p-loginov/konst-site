@@ -100,15 +100,9 @@ function konstanta_install() {
 		}
 	}
 
-	// Меню шапки (блок «Навигация» берёт последнее меню автоматически).
-	$menus = get_posts(
-		array(
-			'post_type'   => 'wp_navigation',
-			'post_status' => 'publish',
-			'numberposts' => 1,
-		)
-	);
-	if ( ! $menus ) {
+	// Меню шапки: своё, отдельно от меню, которое WordPress мог создать сам.
+	$menu_id = (int) get_option( 'konstanta_nav_id' );
+	if ( ! $menu_id || 'publish' !== get_post_status( $menu_id ) ) {
 		$links = '';
 		foreach ( konstanta_pages() as $slug => $page ) {
 			if ( ! $page[1] || ! isset( $ids[ $slug ] ) ) {
@@ -130,7 +124,7 @@ function konstanta_install() {
 				)
 			) . "\n";
 		}
-		wp_insert_post(
+		$menu_id = wp_insert_post(
 			array(
 				'post_type'    => 'wp_navigation',
 				'post_status'  => 'publish',
@@ -138,7 +132,17 @@ function konstanta_install() {
 				'post_content' => wp_slash( $links ),
 			)
 		);
-		$log[] = 'Создано главное меню.';
+		if ( $menu_id && ! is_wp_error( $menu_id ) ) {
+			update_option( 'konstanta_nav_id', (int) $menu_id );
+			$log[] = 'Создано главное меню.';
+		}
+	}
+
+	// Стандартная страница-пример WordPress, если её не меняли.
+	$sample = get_page_by_path( 'sample-page', OBJECT, 'page' );
+	if ( $sample && ( false !== strpos( $sample->post_content, 'wp-admin/' ) || false !== mb_stripos( $sample->post_content, 'пример' ) || false !== stripos( $sample->post_content, 'example' ) ) ) {
+		wp_trash_post( $sample->ID );
+		$log[] = 'Стандартная страница «Sample Page» перемещена в корзину.';
 	}
 
 	// Отделения.
@@ -182,6 +186,33 @@ add_action(
 		if ( $log ) {
 			set_transient( 'konstanta_install_log', $log, 300 );
 		}
+	}
+);
+
+/* При обновлении темы — досоздать недостающее (например, меню). */
+add_action(
+	'admin_init',
+	function () {
+		if ( KONSTANTA_VERSION !== get_option( 'konstanta_installed' ) && current_user_can( 'manage_options' ) ) {
+			$log = konstanta_install();
+			if ( $log ) {
+				set_transient( 'konstanta_install_log', $log, 300 );
+			}
+		}
+	}
+);
+
+/* Шапка всегда показывает меню темы, а не меню, созданное WordPress автоматически. */
+add_filter(
+	'render_block_data',
+	function ( $block ) {
+		if ( 'core/navigation' === $block['blockName'] && empty( $block['attrs']['ref'] ) ) {
+			$menu_id = (int) get_option( 'konstanta_nav_id' );
+			if ( $menu_id && 'publish' === get_post_status( $menu_id ) ) {
+				$block['attrs']['ref'] = $menu_id;
+			}
+		}
+		return $block;
 	}
 );
 
