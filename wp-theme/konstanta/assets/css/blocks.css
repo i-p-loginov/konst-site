@@ -437,3 +437,34 @@
 .branch-item > button.is-active + .branch-sites li {
   color: var(--color-ink);
 }
+
+/* Шапка не ломается при длинном меню: кнопка и название не сжимаются */
+.header-inner {
+  flex-wrap: nowrap;
+}
+
+.header-inner > .logo,
+.header-cta {
+  flex-shrink: 0;
+}
+
+.header-cta .wp-block-button__link,
+.header-phone {
+  white-space: nowrap;
+}
+
+.wp-block-navigation.nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  justify-content: center;
+}
+
+.wp-block-navigation.nav .wp-block-navigation__container {
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .header-phone {
+    display: none;
+  }
+}
