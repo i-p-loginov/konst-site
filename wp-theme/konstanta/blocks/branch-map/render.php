@@ -34,17 +34,18 @@ $svg = preg_replace( '#<g class="map-labels".*?</g>#s', '<g class="map-labels" a
 // Привязка районов к отделениям — из админки, а не из файла карты.
 $svg = preg_replace( '/\s(data-branch|data-site)="[^"]*"/', '', $svg );
 $svg = preg_replace_callback(
-	'/<path class="map-district[^"]*" data-id="([a-z]+)"/',
+	'/<path class="map-district([^"]*)" data-id="([a-z]+)"/',
 	function ( $m ) use ( $branches, $assigned ) {
-		$cls = 'map-district';
-		if ( isset( $assigned[ $m[1] ] ) ) {
+		$id  = $m[2];
+		$cls = 'map-district' . ( false !== strpos( $m[1], 'map-district-hit' ) ? ' map-district-hit' : '' );
+		if ( isset( $assigned[ $id ] ) ) {
 			foreach ( $branches as $b ) {
-				if ( $b['key'] === $assigned[ $m[1] ] && array_search( $m[1], $b['regions'], true ) > 0 ) {
+				if ( $b['key'] === $assigned[ $id ] && array_search( $id, $b['regions'], true ) > 0 ) {
 					$cls .= ' map-district-site';
 				}
 			}
 		}
-		return '<path class="' . $cls . '" data-id="' . $m[1] . '"';
+		return '<path class="' . $cls . '" data-id="' . $id . '"';
 	},
 	$svg
 );
@@ -85,6 +86,7 @@ $wrapper    = get_block_wrapper_attributes(
 	<div class="map-layout reveal">
 		<div class="map-stage" data-map-svg>
 			<?php echo $svg; // phpcs:ignore WordPress.Security.EscapeOutput -- SVG из файла темы, подписи экранированы. ?>
+			<p class="map-attribution">Данные карты © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">участники OpenStreetMap</a>, Natural Earth</p>
 		</div>
 		<aside class="map-panel">
 			<h3 data-map-title><?php echo esc_html( $attributes['panelTitle'] ); ?></h3>

@@ -104,10 +104,15 @@
         path.style.pointerEvents = "none";
         return;
       }
+      bind(path, key);
+      // Увеличенная зона клика дублирует маленький район — с клавиатуры её не выбираем.
+      if (path.classList.contains("map-district-hit")) {
+        path.setAttribute("aria-hidden", "true");
+        return;
+      }
       path.setAttribute("tabindex", "0");
       path.setAttribute("role", "button");
       path.setAttribute("aria-label", BRANCHES[key].name);
-      bind(path, key);
       path.addEventListener("keydown", function (e) {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
