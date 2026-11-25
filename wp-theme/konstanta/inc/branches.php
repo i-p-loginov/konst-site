@@ -9,26 +9,29 @@
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Районы схематической карты Ленобласти (assets/map.svg).
+ * Районы карты Ленобласти (assets/map.svg, собирается wp-theme/tools/build-map.py).
  * id => [название района, x подписи, y подписи].
  */
 function konstanta_map_regions() {
 	return array(
-		'vyborgskiy'     => array( 'Выборгский район', 150, 110 ),
-		'vsevolozhskiy'  => array( 'Всеволожский район', 295, 200 ),
-		'kirovskiy'      => array( 'Кировский район', 385, 195 ),
-		'volkhovskiy'    => array( 'Волховский район', 490, 185 ),
-		'lodeynopolskiy' => array( 'Лодейнопольский район', 620, 120 ),
-		'tikhvinskiy'    => array( 'Тихвинский район', 590, 235 ),
-		'boksitogorskiy' => array( 'Бокситогорский район', 710, 250 ),
-		'kirishskiy'     => array( 'Киришский район', 485, 305 ),
-		'tosnenskiy'     => array( 'Тосненский район', 375, 325 ),
-		'gatchinskiy'    => array( 'Гатчинский район', 235, 355 ),
-		'sosnovoborskiy' => array( 'Сосновый Бор', 90, 255 ),
-		'volosovskiy'    => array( 'Волосовский район', 125, 400 ),
-		'kingiseppskiy'  => array( 'Кингисеппский район', 42, 385 ),
-		'slantsevskiy'   => array( 'Сланцевский район', 75, 510 ),
-		'luzhskiy'       => array( 'Лужский район', 220, 490 ),
+		'vyborgskiy'     => array( 'Выборгский район', 239, 135 ),
+		'priozerskiy'    => array( 'Приозерский район', 331, 142 ),
+		'vsevolozhskiy'  => array( 'Всеволожский район', 361, 240 ),
+		'kirovskiy'      => array( 'Кировский район', 435, 323 ),
+		'volkhovskiy'    => array( 'Волховский район', 535, 268 ),
+		'lodeynopolskiy' => array( 'Лодейнопольский район', 600, 196 ),
+		'podporozhskiy'  => array( 'Подпорожский район', 698, 145 ),
+		'tikhvinskiy'    => array( 'Тихвинский район', 674, 283 ),
+		'boksitogorskiy' => array( 'Бокситогорский район', 682, 396 ),
+		'kirishskiy'     => array( 'Киришский район', 530, 378 ),
+		'tosnenskiy'     => array( 'Тосненский район', 414, 395 ),
+		'gatchinskiy'    => array( 'Гатчинский район', 332, 410 ),
+		'lomonosovskiy'  => array( 'Ломоносовский район', 267, 309 ),
+		'sosnovoborskiy' => array( 'Сосновый Бор', 228, 281 ),
+		'volosovskiy'    => array( 'Волосовский район', 260, 396 ),
+		'kingiseppskiy'  => array( 'Кингисеппский район', 188, 359 ),
+		'slantsevskiy'   => array( 'Сланцевский район', 174, 439 ),
+		'luzhskiy'       => array( 'Лужский район', 266, 466 ),
 	);
 }
 
