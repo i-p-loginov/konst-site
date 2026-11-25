@@ -12,8 +12,8 @@
   --color-surface: #f3f6f8;
   --color-white: #ffffff;
   --color-border: #d8e0e8;
-  --font-display: "Manrope", system-ui, sans-serif;
-  --font-body: "Source Sans 3", system-ui, sans-serif;
+  --font-display: "Roboto Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Roboto", Arial, sans-serif;
   --radius: 4px;
   --shadow-sm: 0 2px 8px rgba(27, 42, 74, 0.06);
   --shadow-md: 0 8px 24px rgba(27, 42, 74, 0.1);
@@ -129,8 +129,9 @@ ul {
 
 .logo {
   display: flex;
-  align-items: center;
-  gap: 0.65rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
   text-decoration: none;
   color: var(--color-ink);
   flex-shrink: 0;
@@ -140,38 +141,24 @@ ul {
   color: var(--color-ink);
 }
 
-.logo-mark {
-  width: 42px;
-  height: 42px;
+/* Цельный логотип: знак + надпись, пропорции 5 : 1 (assets/brand/logo.svg). */
+.logo-img {
+  width: 200px;
+  height: 40px;
   flex-shrink: 0;
   display: block;
 }
 
-.logo-mark circle {
-  fill: #00a3a6;
-}
-
-.logo-mark path {
-  fill: #fff;
-}
-
-.logo-text {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .logo-tag {
   display: block;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 0.65rem;
-  letter-spacing: 0.02em;
-  color: var(--color-ink-muted);
-  text-transform: none;
-  margin-top: 1px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  letter-spacing: 0.06em;
+  color: #465963;
+  text-transform: uppercase;
+  margin-left: 50px;
 }
 
 .nav {
@@ -1285,10 +1272,6 @@ a.contact-value:hover {
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2rem;
   margin-bottom: 2.5rem;
-}
-
-.footer-brand .logo-text {
-  color: var(--color-white);
 }
 
 .footer-brand .logo-tag {

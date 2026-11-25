@@ -23,8 +23,8 @@
     "typography": {
       "defaultFontSizes": false,
       "fontFamilies": [
-        { "slug": "display", "name": "Manrope", "fontFamily": "\"Manrope\", system-ui, sans-serif" },
-        { "slug": "body", "name": "Source Sans 3", "fontFamily": "\"Source Sans 3\", system-ui, sans-serif" }
+        { "slug": "display", "name": "Roboto Condensed", "fontFamily": "\"Roboto Condensed\", \"Arial Narrow\", Arial, sans-serif" },
+        { "slug": "body", "name": "Roboto", "fontFamily": "\"Roboto\", Arial, sans-serif" }
       ],
       "fontSizes": [
         { "slug": "small", "name": "Мелкий", "size": "0.9rem" },

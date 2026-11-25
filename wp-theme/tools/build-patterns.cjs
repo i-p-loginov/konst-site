@@ -396,13 +396,12 @@ pages.privacy = {
 };
 
 /* ---------- шапка и подвал ---------- */
-const logo = (tagClass) =>
+// Логотип — цельный SVG (знак + надпись, assets/brand, собирается tools/build-logo.py),
+// под ним подпись сайта («Партнёр АО «ЛОЭСК»» — меняется в Настройки → Общие).
+const logo = (file = 'logo.svg') =>
   group('logo', [
-    img(T('brand/logo-mark.svg'), 'Константа', 'logo-mark', { width: '42px', height: '42px', href: H(), linkDestination: 'custom' }),
-    group('logo-words', [
-      cb('core/site-title', { level: 0, className: 'logo-text' }),
-      cb('core/site-tagline', { className: cls('logo-tag', tagClass) }),
-    ]),
+    img(T(`brand/${file}`), 'Константа', 'logo-img', { width: '200px', height: '40px', href: H(), linkDestination: 'custom' }),
+    cb('core/site-tagline', { className: 'logo-tag' }),
   ]);
 
 const parts = {
@@ -428,7 +427,7 @@ const parts = {
         container([
           group('footer-grid', [
             group('footer-brand', [
-              logo(),
+              logo('logo-inverse.svg'),
               p('Энергосервис и учёт электроэнергии: проверки, эксплуатация и установка приборов учёта в Ленинградской области.'),
             ]),
             group('footer-col', [
