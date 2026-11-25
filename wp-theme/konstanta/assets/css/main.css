@@ -145,14 +145,8 @@ ul {
   height: 42px;
   flex-shrink: 0;
   display: block;
-}
-
-.logo-mark circle {
-  fill: #00a3a6;
-}
-
-.logo-mark path {
-  fill: #fff;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
 }
 
 .logo-text {
