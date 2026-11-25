@@ -137,6 +137,8 @@
   display: block;
   width: 42px;
   height: 42px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1;
 }
 
 .logo-words {

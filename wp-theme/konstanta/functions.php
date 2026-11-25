@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'KONSTANTA_VERSION', '1.0.2' );
+define( 'KONSTANTA_VERSION', '1.0.3' );
 
 require_once __DIR__ . '/inc/setup.php';
 require_once __DIR__ . '/inc/branches.php';
