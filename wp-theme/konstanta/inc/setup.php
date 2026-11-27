@@ -15,7 +15,7 @@ add_action(
 		add_theme_support( 'responsive-embeds' );
 		add_editor_style(
 			array(
-				'https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap',
+				'assets/css/fonts.css',
 				'assets/css/main.css',
 				'assets/css/blocks.css',
 				'assets/css/editor.css',
@@ -28,8 +28,8 @@ add_action(
 	'wp_enqueue_scripts',
 	function () {
 		$uri = get_theme_file_uri( 'assets' );
-		wp_enqueue_style( 'konstanta-fonts', 'https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap', array(), null );
-		wp_enqueue_style( 'konstanta-main', $uri . '/css/main.css', array(), KONSTANTA_VERSION );
+		wp_enqueue_style( 'konstanta-fonts', $uri . '/css/fonts.css', array(), KONSTANTA_VERSION );
+		wp_enqueue_style( 'konstanta-main', $uri . '/css/main.css', array( 'konstanta-fonts' ), KONSTANTA_VERSION );
 		wp_enqueue_style( 'konstanta-blocks', $uri . '/css/blocks.css', array( 'konstanta-main' ), KONSTANTA_VERSION );
 		wp_enqueue_script( 'konstanta-main', $uri . '/js/main.js', array(), KONSTANTA_VERSION, array( 'in_footer' => true ) );
 	}

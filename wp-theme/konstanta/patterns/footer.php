@@ -11,15 +11,11 @@
 <div class="wp-block-group container"><!-- wp:group {"className":"footer-grid","layout":{"type":"default"}} -->
 <div class="wp-block-group footer-grid"><!-- wp:group {"className":"footer-brand","layout":{"type":"default"}} -->
 <div class="wp-block-group footer-brand"><!-- wp:group {"className":"logo","layout":{"type":"default"}} -->
-<div class="wp-block-group logo"><!-- wp:image {"width":"42px","height":"42px","linkDestination":"custom","className":"logo-mark"} -->
-<figure class="wp-block-image is-resized logo-mark"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/assets/brand/logo-mark.svg" alt="Константа" style="width:42px;height:42px"/></a></figure>
+<div class="wp-block-group logo"><!-- wp:image {"width":"200px","height":"40px","linkDestination":"custom","className":"logo-img"} -->
+<figure class="wp-block-image is-resized logo-img"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/assets/brand/logo-inverse.svg" alt="Константа" style="width:200px;height:40px"/></a></figure>
 <!-- /wp:image -->
 
-<!-- wp:group {"className":"logo-words","layout":{"type":"default"}} -->
-<div class="wp-block-group logo-words"><!-- wp:site-title {"level":0,"className":"logo-text"} /-->
-
 <!-- wp:site-tagline {"className":"logo-tag"} /--></div>
-<!-- /wp:group --></div>
 <!-- /wp:group -->
 
 <!-- wp:paragraph -->

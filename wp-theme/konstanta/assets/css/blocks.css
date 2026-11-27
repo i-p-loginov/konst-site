@@ -131,31 +131,33 @@
   position: relative;
 }
 
-.logo .logo-mark,
-.logo .logo-mark a,
-.logo .logo-mark img {
+.logo .logo-img,
+.logo .logo-img a,
+.logo .logo-img img {
   display: block;
-  width: 42px;
-  height: 42px;
-}
-
-.logo-words {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo .logo-text {
+  width: 200px;
+  height: 40px;
   margin: 0;
-  line-height: 1.15;
 }
 
-.logo .logo-text a {
-  color: inherit;
-  text-decoration: none;
-}
-
+/* Подпись под надписью логотипа; в подвале не наследует размер абзацев. */
 .logo .logo-tag {
-  margin: 1px 0 0;
+  margin: 0 0 0 50px;
+  font-size: 0.68rem;
+}
+
+@media (max-width: 600px) {
+  .logo .logo-img,
+  .logo .logo-img a,
+  .logo .logo-img img {
+    width: 160px;
+    height: 32px;
+  }
+
+  .logo .logo-tag {
+    margin-left: 40px;
+    font-size: 0.6rem;
+  }
 }
 
 .header-phone {
